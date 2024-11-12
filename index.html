@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Railways</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="menu">
+      <h1>Railways</h1>
+
+      <form>
+        <input type="text" id="name" placeholder="Player name:" />
+
+        <input type="button" id="start" value="Start game" />
+        <input type="button" id="description" value="Description" />
+
+        <p>Select difficulty:</p>
+        <input
+          type="radio"
+          id="easy"
+          name="difficulty"
+          value="easy"
+          checked="true"
+        />
+        <label for="easy">Easy</label><br />
+        <input type="radio" id="hard" name="difficulty" value="hard" />
+        <label for="hard">Hard</label><br />
+      </form>
+    </div>
+
+    <div id="game" hidden>
+      <h1>Railways</h1>
+
+      <h2 id="gName"></h2>
+      <h2 id="gTime"></h2>
+
+      <table id="gTable"></table>
+    </div>
+
+    <div id="desc" hidden>
+      <h1>Railways</h1>
+      <h2>Description</h2>
+      <p>
+        A játék különböző méretű négyzetrácsos hálón játszódhat, ahol a célunk
+        az, hogy egy összefüggő körvasútvonalat alkossunk úgy, hogy minden olyan
+        helyre eljusson a vonat, ahova lehetséges.
+      </p>
+      <p>Mezők</p>
+      <ul>
+        <li>Üres mező</li>
+        <p>
+          Ebben a cellában a vasútvonal a belépési irányon kívül maradék három
+          irányba tud haladni.
+        </p>
+        <li>Híd mező</li>
+        <p>
+          Ezen a mezőn a vasútvonalat csak a híd által megadott egyenes írányban
+          lehet megépíteni.
+        </p>
+        <li>Hegy mező</li>
+        <p>
+          Ezeken a mezőkön a sziklák a cellának két szomszédos kijáratát
+          lezárják, így csak 90°-ban elfordulva lehet továbbhaladni.
+        </p>
+        <li>Oázis mező</li>
+        <p>Erre a cellára nem lehet vasutat építeni.</p>
+      </ul>
+
+      <form>
+        <input type="button" id="closeDesc" value="Back" />
+      </form>
+    </div>
+
+    <div id="toplist">
+      <h1>Toplist:</h1>
+
+      <table id="tTable"></table>
+
+      <form>
+        <input type="button" id="closeTopList" value="Back" hidden />
+      </form>
+    </div>
+
+    <div id="endScreen" hidden>
+      <h1>Railways</h1>
+      <h2 id="congrats">Congrats!</h2>
+      <h2 id="score"></h2>
+
+      <input type="button" id="closeEndSc" value="Back" />
+    </div>
+  </body>
+  <script type="module" src="init.js"></script>
+</html>

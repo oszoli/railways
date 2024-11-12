@@ -1,0 +1,43 @@
+body {
+  background-color: #ffeed0;
+}
+
+#menu,
+#desc,
+#endScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  padding: 20px;
+}
+#gTable {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  padding: 20px;
+}
+
+table {
+  border: 10px solid #6b3b00;
+  border-collapse: collapse;
+}
+
+td {
+  min-width: 100px;
+  height: 100px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+#tTable,
+#tTable td {
+  border: 0px;
+  height: 50px;
+}
